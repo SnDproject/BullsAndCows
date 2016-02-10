@@ -1,0 +1,119 @@
+// Mixins:
+linear_gradient(origin, colors...)
+
+  fallback = colors[1][0]
+
+  colors = join(', ', colors)
+  colors = unquote(colors)
+
+  background-color: fallback
+  background-image: -webkit-linear-gradient(origin, colors) // Chrome, Safari
+  background-image:    -moz-linear-gradient(origin, colors) // Firefox (3.6 - 15)
+  background-image:     -ms-linear-gradient(origin, colors) // IE 10
+  background-image:      -o-linear-gradient(origin, colors) // Opera (11.1 - 12.0)
+  background-image:         linear-gradient(origin, colors) // W3C
+
+
+//COLORS PRIMARY:
+bgSide = rgb(28, 28, 28)
+bgCenter = rgb(50, 50, 50)
+footerSide = rgb(25, 25, 25)
+footerCenter = rgb(44, 44, 44)
+textPrimary = rgb(255, 255, 255)
+textSecondary = rgb(220, 192, 142)
+
+
+
+
+
+//FONTS
+// @font-face
+//   font-family yanoneKaffeesatz
+//   src url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz)
+//   font-weight normal
+
+
+@font-face
+  font-family 'League-Gothic'
+  src url('/css/fonts/LeagueGothic-Regular.eot')
+  src url('/css/fonts/LeagueGothic-Regular.otf') format('opentype')
+
+
+//SIZE:
+primaryWidth = 1200px
+
+html, body
+    linear_gradient(left, bgSide, bgCenter, bgCenter, bgCenter, bgSide)
+    margin 0
+    padding 0
+    height 100%
+    color #aaa
+
+
+header
+  .logo
+    font-size 140px
+    font-family 'Yanone Kaffeesatz', sans-serif
+    color textPrimary
+    line-height 0.136
+    margin-top 165px
+    span
+      color textSecondary
+    a:hover
+      text-decoration none
+
+  .navbar-default
+    background-color transparent
+    font-family League-Gothic
+    font-size 24px
+    line-height 0.792
+    text-shadow 0px 1px 2px rgba(0, 0, 0, 0.004)
+    margin-top 91px
+
+
+//       .HOME_____ENTERTAINMENT_____FASHION_____POLITICS {
+//   font-size: 24px;
+//   font-family: "LeagueGothic";
+//   color: rgb(220, 192, 142);
+//   line-height: 0.792;
+//   text-align: left;
+//   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.004);
+//   position: absolute;
+//   left: 81.937px;
+//   top: 256.996px;
+//   z-index: 196;
+// }
+
+
+
+
+// .THESTYLE {
+//   font-size: 140px;
+//   font-family: "Yanone Kaffeesatz";
+//   color: rgb(255, 255, 255);
+//   line-height: 0.136;
+//   text-align: left;
+//   position: absolute;
+//   left: 65.977px;
+//   top: 165.48px;
+//   z-index: 185;
+// }
+
+
+footer
+    linear_gradient(left, footerSide, footerCenter, footerCenter, footerCenter, footerSide)
+    position absolute
+    bottom 0
+    width 100%
+    height 250px
+
+.container
+    width primaryWidth
+
+
+.wrapper
+    height auto /* real browsers */
+    height 100% /* IE6: treaded as min-height*/
+
+    min-height 100% /* real browsers */
+

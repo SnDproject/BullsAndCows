@@ -1,0 +1,51 @@
+<div class="container">
+<!-- MAIN GAME SECTION -->
+    <div class="bnc-game">
+        <media>
+            <header class=" bnc-timer">
+
+            </header>
+            <div class="bnc-display">
+                {{vm.code}}
+            </div>
+        </media>
+        <div class="bnc-progress">
+            <ul>
+                <li ng-repeat="(key, row) in vm.progress">
+                    {{key + 1}}: {{row.code}} : {{row.result}}
+                </li>
+            </ul>
+        </div>
+        <div class="bnc-keyboard" ng-keyboard="vm.keys">
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <h1>Game in progress!</h1>
+    <div class="result">
+        <ul>
+            <li ng-repeat="(key, row) in vm.progress">
+                {{key + 1}}: {{row.code}} : {{row.result}}
+            </li>
+        </ul>
+    </div>
+    <div class="controlls">
+        <form>
+            <input type="text" ng-model="vm.code" />
+            <button ng-click="vm.guess(vm.code)">Guess</button>
+        </form>
+    </div>
+    <div class="statistics">
+        <ul>
+            <li>
+                Total time{{vm.stats.eStats.totalTime}}
+            </li>
+        </ul>
+    </div>
+</div>

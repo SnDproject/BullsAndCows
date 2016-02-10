@@ -1,0 +1,104 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Source Control</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" href="css/toastr.min.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/index.css" />
+</head>
+<body ng-app="myApp" ng-cloak>
+    <div class=" wrapper container">
+        <header>
+            <div class="logo">
+                <h1><a href="#/" class="logo">BULLS <span> &amp; COWS </span></a></h1>
+            </div>
+            <nav class="navbar navbar-default">
+                <div>
+                    <div class="navbar-header">
+
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse" id="navbar-main">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown">
+                              <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">New Game<span class="caret"></span></a>
+                              <ul class="dropdown-menu" role="menu" ng-controller="GameController as vm">
+                                <li><a ng-click="vm.newGame(0)">Easy</a></li>
+                                <li><a ng-click="vm.newGame(1)">Normal</a></li>
+                                <li><a ng-click="vm.newGame(2)">Hard</a></li>
+                                <li><a ng-click="vm.newGame(3)">Extreme</a></li>
+                              </ul>
+                            </li>
+
+                        </ul>
+                        <ul class="nav navbar-nav pull-right" ng-controller="LoginCtrl">
+                            <li ng-hide="identity.isAuthenticated()">
+                                <a href="#/register">REGISTER</a>
+                            </li>
+                            <li ng-hide="identity.isAuthenticated()">
+                                <a href="#/login">LOGIN</a>
+                            </li>
+                            <li ng-show="identity.isAuthenticated()">
+                                <a href="#/user/details">{{identity.getCurrentUser().email}}</a>
+                            </li>
+                            <li ng-show="identity.isAuthenticated()">
+                                <a href="#/" ng-click="logout()">LOGOUT</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div ng-view>
+        </div>
+        <hr />
+
+    </div>
+    <footer class=" text-center" ng-cloak>
+        <div class="">
+            TEST!
+        </div>
+    </footer>
+    <hr />
+    <script src="lib/jquery/jquery.js"></script>
+    <script src="lib/toastr/toastr.min.js"></script>
+    <script src="lib/bootstrap/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="lib/angular/angular-cookies.js"></script>
+    <script src="lib/angular/angular-sanitize.min.js"></script>
+    <script src="lib/angular/ngStorage.js"></script>
+    <!-- APPLICATION -->
+    <script src="js/app.js"></script>
+    <!-- COMMON -->
+    <script src="js/common/notifier-service.js"></script>
+    <script src="js/common/data-service.js"></script>
+    <script src="js/common/statistics-service.js"></script>
+
+    <!-- HOME -->
+    <script src="js/home/home-controller.js"></script>
+
+
+    <!-- GAME -->
+    <script src="js/game/game-controller.js"></script>
+    <script src="js/game/endgame-controller.js"></script>
+    <script src="js/game/game-service.js"></script>
+
+    <!-- IDENTITY -->
+    <script src="js/identity/auth.js"></script>
+    <script src="js/identity/authorization.js"></script>
+    <script src="js/identity/identity.js"></script>
+    <script src="js/identity/login-controller.js"></script>
+    <script src="js/identity/register-controller.js"></script>
+</body>
+</html>

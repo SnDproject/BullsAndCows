@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 class="text-center">
+        Projects
+        <a href="#/projects/create" ng-show="vm.identity.isAuthenticated()" class="btn btn-sm btn-primary pull-right">Create</a>
+    </h2>
+
+    <div ng-hide="vm.identity.isAuthenticated()">
+        <div public-projects></div>
+    </div>
+
+    <div ng-show="vm.identity.isAuthenticated()">
+        <div all-projects>
+            <div public-projects></div>
+        </div>
+    </div>
+</div>

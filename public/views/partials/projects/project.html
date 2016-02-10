@@ -1,0 +1,116 @@
+<div class="container">
+    <h1>{{vm.project.Name}}</h1>
+    <h2>{{vm.project.CreatedOn | date}}</h2>
+    <h3>Number of contributors: {{vm.project.TotalUsers}}  /  License: <span ng-bind-html="vm.project.License | license"></span> {{vm.project.License}}</h3>
+
+
+
+    <hr>
+    <div class="container">
+        <h2>Add collaborator</h2>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <div>
+                    <input type="text" placeholder="collaborator name" class="form-control" ng-model="vm.collaborator" id="collaborator" required>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <button class="btn btn-sm btn-primary pull-left" ng-click="vm.addColaborator(vm.collaborator)">Add</button>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="container">
+        <h2>Collaborators</h2>
+        <table class="table table-bordered">
+            <tr ng-repeat="collaborator in vm.collaborators" ng-class-even="'even-class'" ng-class-odd="'odd-class'">
+                <td class="text-center">
+                    <span>Name: {{collaborator}}</span>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+    <h2 class="text-center">
+        Commits
+        <a href="#/commits/create" ng-show="vm.identity.isAuthenticated()" class="btn btn-sm btn-primary pull-right">Create</a>
+    </h2>
+
+    <div ng-show="vm.identity.isAuthenticated()" class="row">
+
+        <div class="col-md-3">
+            <div class="form-group">
+                <div class="text-center">
+                    <label for="from-city" class="control-label">By User</label>
+                </div>
+                <div>
+                    <input type="text" placeholder="filter by user" class="form-control" ng-model="vm.request.ByUser" id="byUser">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <div class="text-center">
+                    <label for="page-size" class="control-label">Page size</label>
+                </div>
+                <div>
+                    <input type="number" class="form-control" ng-model="vm.request.pageSize" id="page-size" max="20" min="2" />
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <div class="text-center">
+                    <label for="page-size" class="control-label">From date</label>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="form-group">
+                <div class="text-center">
+                    <label for="page-size" class="control-label">To date</label>
+                </div>
+                <div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" ng-show="vm.identity.isAuthenticated()">
+        <div class="col-md-3">
+            <div class="col-md-6">
+                <button class="btn btn-primary pull-right" ng-click="vm.filterCommits()">Filter</button>
+            </div>
+        </div>
+        <div class="col-md-3 col-md-offset-6">
+            <div class="col-md-3">
+                <button class="btn btn-primary" ng-click="vm.prevPage()">&lt;&lt;</button>
+            </div>
+            <div class="col-md-6">
+                <input type="number" ng-model="vm.request.page" class="form-control" />
+            </div>
+            <div class="col-md-3">
+                <button class="btn btn-primary" ng-click="vm.nextPage()">&gt;&gt;</button>
+            </div>
+        </div>
+    </div>
+
+    <br />
+
+    <div ng-show="vm.commits && vm.commits.length > 0">
+        <div all-commits />
+    </div>
+    <div ng-hide="vm.commits && vm.commits.length > 0">
+        <h2 class="text-center">No results!</h2>
+    </div>
+</div>
+
+</div>

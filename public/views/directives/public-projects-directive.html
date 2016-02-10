@@ -1,0 +1,26 @@
+<table class="table table-bordered">
+    <tr>
+        <th class="text-center">
+            Name
+        </th>
+        <th class="text-center">
+            Created on
+        </th>
+        <th class="text-center">
+            Total Users
+        </th>
+        <th class="text-center" ng-show="vm.identity.isAuthenticated()">
+            License
+        </th>
+    </tr>
+    <tr ng-repeat="project in vm.publicProjects" ng-class-even="'even-class'" ng-class-odd="'odd-class'">
+        <td class="text-center">
+            <a href="#/projects/{{project.Id}}">{{project.Name}}</a>
+        </td>
+        <td class="text-center">{{project.CreatedOn}}</td>
+        <td class="text-center">{{project.TotalUsers}}</td>
+        <td class="text-center" ng-show="vm.identity.isAuthenticated()" ng-bind-html="project.License | license">
+            <!-- {{project.License | license}} -->
+        </td>
+    </tr>
+</table>
