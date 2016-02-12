@@ -21,8 +21,13 @@ footerSide = rgb(25, 25, 25)
 footerCenter = rgb(44, 44, 44)
 textPrimary = rgb(255, 255, 255)
 textSecondary = rgb(220, 192, 142)
-
-
+dropdown = rgb(34, 34, 34)
+iconDefault = rgb(88, 88, 88)
+iconSelected = rgb(145, 28, 13)
+searchBG = rgb(30, 30, 30)
+searchShadow = rgb(44, 44, 44)
+blockColor = rgb(255, 255, 255)
+blockTitle = rgb(154, 29, 13)
 
 
 
@@ -42,78 +47,286 @@ textSecondary = rgb(220, 192, 142)
 //SIZE:
 primaryWidth = 1200px
 
+
+
+@media (max-width: 767px)
+  header
+    font-size 14px
+    margin 3px
+  .container
+    font-size 14px
+    width 100%
+  footer
+    div
+      display none
+
+
+
+
+//reset
+div, span, ul, li, a, input, section, header, footer, h1, h3, h4
+  margin 0
+  padding 0
+
+
+
+
+
+
 html, body
     linear_gradient(left, bgSide, bgCenter, bgCenter, bgCenter, bgSide)
     margin 0
     padding 0
     height 100%
-    color #aaa
+    color textPrimary
 
 
+//**************
+//HEADER SECTION
+//**************
 header
+  margin-bottom 58px
   .logo
     font-size 140px
     font-family 'Yanone Kaffeesatz', sans-serif
     color textPrimary
-    line-height 0.136
-    margin-top 165px
+    margin-top 120px
     span
       color textSecondary
-    a:hover
-      text-decoration none
+    a
+      &:hover
+        text-decoration none
+      &:visited
+        text-decoration none
+
+  //*******************
+  // NAVIGATION SECTION
+  //*******************
+  .navbar-collapse
+    padding 0
 
   .navbar-default
+    margin 0
+    padding 0
     background-color transparent
-    font-family League-Gothic
+    font-family "League-Gothic", "sans-serif"
+    height 40px
     font-size 24px
+    color textPrimary
     line-height 0.792
-    text-shadow 0px 1px 2px rgba(0, 0, 0, 0.004)
-    margin-top 91px
+    text-shadow 0 1px 2px rgba(0, 0, 0, 0.004)
+    margin-top 26px
+    .icon-arrow
+      margin-right 15px
+    input
+      border none
+      height 32px
+      width 191px
+      vertical-align middle
+      background-color searchBG
+      box-shadow 2px 2px searchShadow
+      font-size 12px
+      font-family "Arial"
+      color: iconDefault
+      font-style italic
+
+      text-align left
+      text-shadow 0 0 1px 0 rgba(0, 0, 0, 0.7)
+      &::-webkit-input-placeholder
+        display inline
+        color iconDefault
+    .icon-search
+      font-size 16px
+      color textSecondary
+      line-height 2
+    .navbar-nav
+      .open
+        ul
+          background-color dropdown
+          border 0 solid dropdown
+          border-radius 0 4px 4px 4px
+          box-shadow none
+          a
+            color textPrimary
+            &:hover
+              background-color inherit
+              color textSecondary
+              span
+                color iconSelected
+        >a
+          background-color dropdown
+          color: textSecondary
+          border 0 solid dropdown
+          border-radius 4px 4px 0 0
+          box-shadow none
+          &:focus
+            background-color dropdown
+            color: textSecondary
+      li
+        a
+          span
+            color iconDefault
+          &:hover
+            color textSecondary
 
 
-//       .HOME_____ENTERTAINMENT_____FASHION_____POLITICS {
-//   font-size: 24px;
-//   font-family: "LeagueGothic";
-//   color: rgb(220, 192, 142);
-//   line-height: 0.792;
-//   text-align: left;
-//   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.004);
-//   position: absolute;
-//   left: 81.937px;
-//   top: 256.996px;
-//   z-index: 196;
-// }
+//**************
+//CONTENT SECTION
+//**************
+
+.main
+  margin-top
+
+div.bnc-block
+  background-color blockColor
+  background-image url('/img/stripes_bg.png')
+  background-position: bottom
+  background-repeat: repeat-x
+  .border
+    border-top 1px dotted gray
+  p
+    padding 10px
+    padding-bottom 19px
+    font-size 13px
+    font-family "Droid Sans" , "sans-serif"
+    color rgb(122, 117, 117)
+  section
+    width 96%
+    position relative
+    margin 0 auto 0 auto
+    top 4px
+    font-size 30px
+    .keyboard
+      text-align center
+      div
+        display inline-block
+        width 25%
+      button
+        width 100%
+        color textSecondary
+        background-color bgCenter
+        border 0
+        &:disabled
+          color bgSide
+          background-color iconDefault
+      button.control
+        width 48%
+        display inline-block
+    ul
+      list-style-type none
+      .subtitle
+        margin 0 0 0 10px
+    .title
+      font-family "League-Gothic", "sans-serif"
+      color blockTitle
+
+      margin 0 0 5px 10px
+    .subtitle
+      font-size 0.6em
+      font-family "League-Gothic", "sans-serif"
+      color footerCenter
+      margin 0 0 5px 10px
+  header
+    width 96%
+    position relative
+    margin 0 auto 0 auto
+    top 4px
+    .title
+      position absolute
+      top 0
+      right 0
+      background-color blockTitle
+      color textPrimary
+      font-size 22px
+      font-family "League-Gothic", "sans-serif"
+      padding 5px 12px 5px 12px
+      text-shadow 1px 1px 4px #000000
+    .timer
+      width 100%
+    .subtitle
+      position absolute
+      top 36px
+      right 0
+      font-size 48px
+      font-family "League-Gothic", "sans-serif"
+      color textPrimary
+      padding 0 0 0 12px
+      text-shadow: 0 0 6px #000000
+    img
+      width 100%
 
 
 
+//**************
+//FOOTER SECTION
+//**************
 
-// .THESTYLE {
-//   font-size: 140px;
-//   font-family: "Yanone Kaffeesatz";
-//   color: rgb(255, 255, 255);
-//   line-height: 0.136;
-//   text-align: left;
-//   position: absolute;
-//   left: 65.977px;
-//   top: 165.48px;
-//   z-index: 185;
-// }
-
+h2
+  padding 0
+  margin 49px 0 20px 0
+  font-size 30px
+  font-family "League-Gothic", "sans-serif"
+  color rgb(220, 192, 142)
+  text-shadow 0 1px 1px rgba(0, 0, 0, 0.78)
+  text-align left
 
 footer
-    linear_gradient(left, footerSide, footerCenter, footerCenter, footerCenter, footerSide)
-    position absolute
-    bottom 0
-    width 100%
-    height 250px
+  linear_gradient(left, footerSide, footerCenter, footerCenter, footerCenter, footerSide)
+  width 100%
+  p
+    text-align right
+    font-size 12px
+    font-family "Droid Sans", "sans-serif"
+    color rgb(104, 104, 104)
+    text-shadow 0 1px 1px rgba(0, 0, 0, 0.78)
+    a
+      color rgb(135, 135, 135)
+      font-style normal
+      &:hover
+        text-decoration none
+        color inherit
+  .border
+    border-top 1px solid rgb(74, 74, 74)
+    box-shadow 0 -1px black
+  ul
+    list-style-type none
+    text-align left
+    margin-bottom 68px
+    li
+      a
+        font-size 13px
+        font-family "Myriad Pro", "serif"
+        color rgb(209, 209, 209)
+        line-height 2.308
+        text-align left
+        text-shadow 0 1px 1px rgba(0, 0, 0, 0.78)
 
-.container
-    width primaryWidth
+        .icon-arrow
+          margin-right 10px
+          color iconDefault
+          text-shadow 1px 1px rgba(0, 0, 0, 0.78)
+
+        &:hover
+          text-decoration none
+          color textPrimary
+          .icon-arrow
+            color iconSelected
+
+
+
+
+footer, .push
+  height 400px
+
+
+// .container
+//     width primaryWidth
 
 
 .wrapper
-    height auto /* real browsers */
+    height auto !important /* real browsers */
     height 100% /* IE6: treaded as min-height*/
 
     min-height 100% /* real browsers */
+    margin-bottom -400px
 

@@ -3,6 +3,34 @@
   src: url("/css/fonts/LeagueGothic-Regular.eot");
   src: url("/css/fonts/LeagueGothic-Regular.otf") format('opentype');
 }
+@media (max-width: 767px) {
+  header {
+    font-size: 14px;
+    margin: 3px;
+  }
+  .container {
+    font-size: 14px;
+    width: 100%;
+  }
+  footer div {
+    display: none;
+  }
+}
+div,
+span,
+ul,
+li,
+a,
+input,
+section,
+header,
+footer,
+h1,
+h3,
+h4 {
+  margin: 0;
+  padding: 0;
+}
 html,
 body {
   background-color: #323232;
@@ -14,14 +42,16 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  color: #aaa;
+  color: #fff;
+}
+header {
+  margin-bottom: 58px;
 }
 header .logo {
   font-size: 140px;
   font-family: 'Yanone Kaffeesatz', sans-serif;
   color: #fff;
-  line-height: 0.136;
-  margin-top: 165px;
+  margin-top: 120px;
 }
 header .logo span {
   color: #dcc08e;
@@ -29,13 +59,185 @@ header .logo span {
 header .logo a:hover {
   text-decoration: none;
 }
+header .logo a:visited {
+  text-decoration: none;
+}
+header .navbar-collapse {
+  padding: 0;
+}
 header .navbar-default {
+  margin: 0;
+  padding: 0;
   background-color: transparent;
-  font-family: League-Gothic;
+  font-family: "League-Gothic", "sans-serif";
+  height: 40px;
   font-size: 24px;
+  color: #fff;
   line-height: 0.792;
-  text-shadow: 0px 1px 2px rgba(0,0,0,0.004);
-  margin-top: 91px;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.004);
+  margin-top: 26px;
+}
+header .navbar-default .icon-arrow {
+  margin-right: 15px;
+}
+header .navbar-default input {
+  border: none;
+  height: 32px;
+  width: 191px;
+  vertical-align: middle;
+  background-color: #1e1e1e;
+  box-shadow: 2px 2px #2c2c2c;
+  font-size: 12px;
+  font-family: "Arial";
+  color: #585858;
+  font-style: italic;
+  text-align: left;
+  text-shadow: 0 0 1px 0 rgba(0,0,0,0.7);
+}
+header .navbar-default input::-webkit-input-placeholder {
+  display: inline;
+  color: #585858;
+}
+header .navbar-default .icon-search {
+  font-size: 16px;
+  color: #dcc08e;
+  line-height: 2;
+}
+header .navbar-default .navbar-nav .open ul {
+  background-color: #222;
+  border: 0 solid #222;
+  border-radius: 0 4px 4px 4px;
+  box-shadow: none;
+}
+header .navbar-default .navbar-nav .open ul a {
+  color: #fff;
+}
+header .navbar-default .navbar-nav .open ul a:hover {
+  background-color: inherit;
+  color: #dcc08e;
+}
+header .navbar-default .navbar-nav .open ul a:hover span {
+  color: #911c0d;
+}
+header .navbar-default .navbar-nav .open >a {
+  background-color: #222;
+  color: #dcc08e;
+  border: 0 solid #222;
+  border-radius: 4px 4px 0 0;
+  box-shadow: none;
+}
+header .navbar-default .navbar-nav .open >a:focus {
+  background-color: #222;
+  color: #dcc08e;
+}
+header .navbar-default .navbar-nav li a span {
+  color: #585858;
+}
+header .navbar-default .navbar-nav li a:hover {
+  color: #dcc08e;
+}
+div.bnc-block {
+  background-color: #fff;
+  background-image: url("/img/stripes_bg.png");
+  background-position: bottom;
+  background-repeat: repeat-x;
+}
+div.bnc-block .border {
+  border-top: 1px dotted #808080;
+}
+div.bnc-block p {
+  padding: 10px;
+  padding-bottom: 19px;
+  font-size: 13px;
+  font-family: "Droid Sans", "sans-serif";
+  color: #7a7575;
+}
+div.bnc-block section {
+  width: 96%;
+  position: relative;
+  margin: 0 auto 0 auto;
+  top: 4px;
+  font-size: 30px;
+}
+div.bnc-block section .keyboard {
+  text-align: center;
+}
+div.bnc-block section .keyboard div {
+  display: inline-block;
+  width: 25%;
+}
+div.bnc-block section .keyboard button {
+  width: 100%;
+  color: #dcc08e;
+  background-color: #323232;
+  border: 0;
+}
+div.bnc-block section .keyboard button:disabled {
+  color: #1c1c1c;
+  background-color: #585858;
+}
+div.bnc-block section .keyboard button.control {
+  width: 48%;
+  display: inline-block;
+}
+div.bnc-block section ul {
+  list-style-type: none;
+}
+div.bnc-block section ul .subtitle {
+  margin: 0 0 0 10px;
+}
+div.bnc-block section .title {
+  font-family: "League-Gothic", "sans-serif";
+  color: #9a1d0d;
+  margin: 0 0 5px 10px;
+}
+div.bnc-block section .subtitle {
+  font-size: 0.6em;
+  font-family: "League-Gothic", "sans-serif";
+  color: #2c2c2c;
+  margin: 0 0 5px 10px;
+}
+div.bnc-block header {
+  width: 96%;
+  position: relative;
+  margin: 0 auto 0 auto;
+  top: 4px;
+}
+div.bnc-block header .title {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #9a1d0d;
+  color: #fff;
+  font-size: 22px;
+  font-family: "League-Gothic", "sans-serif";
+  padding: 5px 12px 5px 12px;
+  text-shadow: 1px 1px 4px #000;
+}
+div.bnc-block header .timer {
+  width: 100%;
+}
+div.bnc-block header .subtitle {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  font-size: 48px;
+  font-family: "League-Gothic", "sans-serif";
+  color: #fff;
+  padding: 0 0 0 12px;
+  text-shadow: 0 0 6px #000;
+}
+div.bnc-block header img {
+  width: 100%;
+}
+h2 {
+  padding: 0;
+  margin: 49px 0 20px 0;
+  font-size: 30px;
+  font-family: "League-Gothic", "sans-serif";
+  color: #dcc08e;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.78);
+  text-align: left;
 }
 footer {
   background-color: #2c2c2c;
@@ -44,16 +246,59 @@ footer {
   background-image: -ms-linear-gradient(left, #191919, #2c2c2c, #2c2c2c, #2c2c2c, #191919);
   background-image: -o-linear-gradient(left, #191919, #2c2c2c, #2c2c2c, #2c2c2c, #191919);
   background-image: linear-gradient(left, #191919, #2c2c2c, #2c2c2c, #2c2c2c, #191919);
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: 250px;
 }
-.container {
-  width: 1200px;
+footer p {
+  text-align: right;
+  font-size: 12px;
+  font-family: "Droid Sans", "sans-serif";
+  color: #686868;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.78);
+}
+footer p a {
+  color: #878787;
+  font-style: normal;
+}
+footer p a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+footer .border {
+  border-top: 1px solid #4a4a4a;
+  box-shadow: 0 -1px #000;
+}
+footer ul {
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 68px;
+}
+footer ul li a {
+  font-size: 13px;
+  font-family: "Myriad Pro", "serif";
+  color: #d1d1d1;
+  line-height: 2.308;
+  text-align: left;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.78);
+}
+footer ul li a .icon-arrow {
+  margin-right: 10px;
+  color: #585858;
+  text-shadow: 1px 1px rgba(0,0,0,0.78);
+}
+footer ul li a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+footer ul li a:hover .icon-arrow {
+  color: #911c0d;
+}
+footer,
+.push {
+  height: 400px;
 }
 .wrapper {
-  height: auto;
+  height: auto !important;
   height: 100%;
   min-height: 100%;
+  margin-bottom: -400px;
 }

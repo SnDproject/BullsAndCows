@@ -1,21 +1,20 @@
-<div>
-    <h1>
-        VICTORY
-    </h1>
-    <h2>
-        Current game:
-    </h2>
-    <div class="stats">
-        <ul>
-            <li>
-                Game type: {{vm.currentGame.type}}
-            </li>
-            <li>
-                Total time: {{vm.currentGame.time}}
-            </li>
-            <li>
-                Total moves: {{vm.currentGame.moves}}
-            </li>
-        </ul>
+<div class="row">
+    <div class=" col-md-6 col-md-offset-3">
+        <div class=" bnc-block">
+            <header>
+                <div class="title">VICTORY</div>
+                <div class="subtitle">
+                    Time: {{vm.currentGame.time}} <br/>
+                    Moves: {{vm.currentGame.moves}}
+                </div>
+                <img src="/img/victory.jpeg" />
+            </header>
+            <section>
+                <div class="title">
+                    Avg time: {{vm.stats.data.totalTime / vm.stats.data.gamesCount | number: 2}} <br/>
+                    Avg moves: {{vm.stats.data.totalMoves / vm.stats.data.gamesCount | number: 2}}
+                </div>
+            </section>
+            <p></p>
+        </div>
     </div>
-</div>

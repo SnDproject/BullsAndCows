@@ -1,6 +1,78 @@
-﻿<div class="container">
-    <div class="jumbotron text-center">
-        <h1>{{vm.data.name}}</h1>
-        <h2>{{vm.data.type}}</h2>
+﻿<div class="row" ng-controller="GameController as vm">
+    <div class=" col-md-3" ng-click="vm.newGame(0)">
+        <div class=" bnc-block">
+            <header>
+                <div class="title">EASY</div>
+                <div class="subtitle">{{'AVG'}}</div>
+                <img src="http://i.dailymail.co.uk/i/pix/2014/11/26/2386019200000578-0-image-14_1417014898879.jpg" />
+            </header>
+            <section>
+                <div class="title">
+                    A WALK IN THE PARK
+                </div>
+                <div class="subtitle">3 POSITIONS / 10 SYMBOLS</div>
+            </section>
+            <div class="border">
+            </div>
+            <p>This is an extremely simplified version of the original bulls and cows game. You will have to break a three digit code. Recommended only for children and total beginners!</p>
+        </div>
+    </div>
+    <div class=" col-md-3" ng-click="vm.newGame(1)">
+        <div class=" bnc-block">
+            <header>
+                <div class="title">NORMAL</div>
+                <div class="subtitle">{{'AVG'}}</div>
+                <img src="http://i.dailymail.co.uk/i/pix/2014/11/26/2386019200000578-0-image-14_1417014898879.jpg" />
+            </header>
+            <section>
+                <div class="title">
+                    CLASSIC FUN
+                </div>
+                <div class="subtitle">4 POSITIONS / 10 SYMBOLS</div>
+            </section>
+            <div class="border">
+            </div>
+            <p>This is the classic bulls and cows experience from your childhood. You are once again facing the 4 digit code.Only difference is you have to hurry up! Every seccond counts.</p>
+        </div>
+    </div>
+    <div class=" col-md-3" ng-click="vm.newGame(2)">
+        <div class=" bnc-block">
+            <header>
+                <div class="title">HARD</div>
+                <div class="subtitle">{{'AVG'}}</div>
+                <img src="http://i.dailymail.co.uk/i/pix/2014/11/26/2386019200000578-0-image-14_1417014898879.jpg" />
+            </header>
+            <section>
+                <div class="title">
+                    SOME CHALLENGE AT LAST
+                </div>
+                <div class="subtitle">4 POSITIONS / 16 SYMBOLS</div>
+            </section>
+            <div class="border">
+            </div>
+            <p>A sixteen bit version of the classic game. The code is once again four positions long, but this time, there are sixteen possible digits for each of them (all the way from 0 to F).</p>
+        </div>
+    </div>
+    <div class=" col-md-3" ng-click="vm.newGame(3)">
+        <div class=" bnc-block">
+            <header>
+                <div class="title">EXTREME</div>
+                <div class="subtitle">{{'AVG'}}</div>
+                <img src="http://i.dailymail.co.uk/i/pix/2014/11/26/2386019200000578-0-image-14_1417014898879.jpg" />
+            </header>
+            <section>
+                <div class="title">
+                    USE EXPENDABLE HARDWARE
+                </div>
+                <div class="subtitle">5 POSITIONS / 16 SYMBOLS</div>
+            </section>
+            <div class="border">
+            </div>
+            <p>You guessed it! Sixteen bit challenge with the insane addition of a fifth code position. Strongly reccommended to play with the cheapest possible hardware and peripherals!</p>
+        </div>
     </div>
 </div>
+
+
+
+
