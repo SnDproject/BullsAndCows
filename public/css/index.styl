@@ -14,6 +14,8 @@ linear_gradient(origin, colors...)
   background-image:         linear-gradient(origin, colors) // W3C
 
 
+
+
 //COLORS PRIMARY:
 bgSide = rgb(28, 28, 28)
 bgCenter = rgb(50, 50, 50)
@@ -32,11 +34,6 @@ blockTitle = rgb(154, 29, 13)
 
 
 //FONTS
-// @font-face
-//   font-family yanoneKaffeesatz
-//   src url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz)
-//   font-weight normal
-
 
 @font-face
   font-family 'League-Gothic'
@@ -49,28 +46,10 @@ primaryWidth = 1200px
 
 
 
-@media (max-width: 767px)
-  header
-    font-size 14px
-    margin 3px
-  .container
-    font-size 14px
-    width 100%
-  footer
-    div
-      display none
-
-
-
-
 //reset
 div, span, ul, li, a, input, section, header, footer, h1, h3, h4
   margin 0
   padding 0
-
-
-
-
 
 
 html, body
@@ -79,6 +58,7 @@ html, body
     padding 0
     height 100%
     color textPrimary
+
 
 
 //**************
@@ -329,4 +309,73 @@ footer, .push
 
     min-height 100% /* real browsers */
     margin-bottom -400px
+
+
+
+@media (max-width: 767px)
+  .wrapper
+    margin-bottom -20px
+  header
+    font-size 18px
+    margin-bottom 5px
+    .logo
+      font-size inherit
+      margin 3px
+    //NAVIGATION
+    .navbar-default
+      margin-top 5px
+      font-size inherit
+      .bnc-home-link, input, .icon-search, .dropdown
+        display none
+      li
+        float left
+
+  .container
+    font-size 14px
+    width 100%
+  .display
+    img
+      height 60px
+    section .title
+      display none
+
+  div.bnc-block
+    margin-bottom 5px
+    font-size 18px
+
+    header
+      .title
+        font-size 18px
+      .subtitle
+        font-size 18px
+
+    section
+      .title
+        font-size 14px
+      ul
+        overflow scroll
+        height 200px
+      padding-bottom 8px
+    .keyboard
+      height 150px
+      line-height 0
+      margin 0
+      padding 0
+      div
+        height 30px
+        button
+          margin 0
+          padding 0
+          font-size 16px
+          height 100%
+      button.control
+        width 48%
+        height 30px
+    p
+      display none
+  footer
+    .bnc-footer-block
+      display none
+  footer, .push
+    height 20px
 

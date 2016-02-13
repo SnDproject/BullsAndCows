@@ -2,10 +2,10 @@
 <!-- MAIN GAME SECTION -->
 <div class="row">
     <div class=" col-md-3">
-        <div class=" bnc-block">
+        <div class=" bnc-block display">
             <header>
                 <div class="title timer">Time: {{vm.time}}</div>
-                <div class="subtitle">{{vm.code}}</div>
+                <div class="subtitle">{{vm.code | uppercase}}</div>
                 <img src="/img/blackboard.png" />
             </header>
             <section>
@@ -15,7 +15,7 @@
                 <ul>
                     <li ng-repeat="(key, row) in vm.progress">
                         <div class="subtitle">
-                            {{key + 1}} : {{row.code}} : {{row.result}}
+                            {{row.index}} : {{row.code | uppercase}} : {{row.result}}
                         </div>
                     </li>
                 </ul>

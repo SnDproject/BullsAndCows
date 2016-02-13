@@ -81,9 +81,10 @@
                                          vm.data.type
                         $location.path('/endgame/' + gameParams);
                     }
-                    vm.progress.push({
+                    vm.progress.splice(0, 0, {
                         code: code,
-                        result: 'Bx' + res.bulls + ' Cx' + res.cows
+                        result: 'Bx' + res.bulls + ' Cx' + res.cows,
+                        index: vm.progress.length + 1
                     });
                 })
         }

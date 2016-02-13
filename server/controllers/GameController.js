@@ -25,6 +25,11 @@ module.exports = {
         //Check if time exceeds 30min
         //TODO
 
+        //Timer starter on first guess:
+        if(!currentGame.startTime){
+            currentGame.startTime = new Date().getTime();
+        }
+
         //Compare codes
         try {
             result = games.compare(currentGame.code, req.params.code); // tries to compare codes

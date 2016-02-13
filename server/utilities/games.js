@@ -57,7 +57,7 @@
             return {
                 type: type,
                 code: newCode(type),
-                startTime: new Date().getTime(),
+                startTime: undefined,//new Date().getTime(),
                 moveCount: 0
             }
         },

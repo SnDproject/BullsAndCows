@@ -3,19 +3,6 @@
   src: url("/css/fonts/LeagueGothic-Regular.eot");
   src: url("/css/fonts/LeagueGothic-Regular.otf") format('opentype');
 }
-@media (max-width: 767px) {
-  header {
-    font-size: 14px;
-    margin: 3px;
-  }
-  .container {
-    font-size: 14px;
-    width: 100%;
-  }
-  footer div {
-    display: none;
-  }
-}
 div,
 span,
 ul,
@@ -301,4 +288,89 @@ footer,
   height: 100%;
   min-height: 100%;
   margin-bottom: -400px;
+}
+@media (max-width: 767px) {
+  .wrapper {
+    margin-bottom: -20px;
+  }
+  header {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  header .logo {
+    font-size: inherit;
+    margin: 3px;
+  }
+  header .navbar-default {
+    margin-top: 5px;
+    font-size: inherit;
+  }
+  header .navbar-default .bnc-home-link,
+  header .navbar-default input,
+  header .navbar-default .icon-search,
+  header .navbar-default .dropdown {
+    display: none;
+  }
+  header .navbar-default li {
+    float: left;
+  }
+  .container {
+    font-size: 14px;
+    width: 100%;
+  }
+  .display img {
+    height: 60px;
+  }
+  .display section .title {
+    display: none;
+  }
+  div.bnc-block {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  div.bnc-block header .title {
+    font-size: 18px;
+  }
+  div.bnc-block header .subtitle {
+    font-size: 18px;
+  }
+  div.bnc-block section {
+    padding-bottom: 8px;
+  }
+  div.bnc-block section .title {
+    font-size: 14px;
+  }
+  div.bnc-block section ul {
+    overflow: scroll;
+    height: 200px;
+  }
+  div.bnc-block .keyboard {
+    height: 150px;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+  }
+  div.bnc-block .keyboard div {
+    height: 30px;
+  }
+  div.bnc-block .keyboard div button {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    height: 100%;
+  }
+  div.bnc-block .keyboard button.control {
+    width: 48%;
+    height: 30px;
+  }
+  div.bnc-block p {
+    display: none;
+  }
+  footer .bnc-footer-block {
+    display: none;
+  }
+  footer,
+  .push {
+    height: 20px;
+  }
 }

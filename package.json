@@ -5,6 +5,9 @@
   "main": "server.js",
   "author": "IK",
   "license": "MIT",
+  "scripts": {
+    "start": "node server.js",
+  },
   "dependencies": {
     "body-parser": "^1.9.0",
     "connect-busboy": "0.0.2",
@@ -18,3 +21,4 @@
     "uuid": "^2.0.1"
   }
 }
+
