@@ -25,6 +25,9 @@
                 controller: 'EndgameController',
                 controllerAs: CONTROLLER_AS_VIEW_MODEL
             })
+            .when('/howto', {
+                templateUrl: PARTIALS_PREFIX + 'howTo/howTo.html'
+            })
             .when('/register', {
                 templateUrl: PARTIALS_PREFIX + 'identity/register.html',
                 controller: 'SignUpCtrl'

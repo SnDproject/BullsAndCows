@@ -366,6 +366,9 @@ footer,
   div.bnc-block p {
     display: none;
   }
+  div.bnc-block p.howto {
+    display: block;
+  }
   footer .bnc-footer-block {
     display: none;
   }
