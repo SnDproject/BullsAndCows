@@ -10,8 +10,7 @@ module.exports = {
     },
     production: {
         rootPath: rootPath,
-        //db: 'mongodb://localhost:27017/bnc',
-        db: 'mongodb://niki:satana1@ds013848.mongolab.com:13848/heroku_d229mdlz',
+        db: process.env.MONGOLAB_URI,
         port: process.env.PORT || 3001
     }
 };
